@@ -235,3 +235,130 @@ footer {
         width:80%
     }
 }
+
+@media (min-width: 900px) {
+    
+    h1,
+    h2 {
+        
+        text-align:center;
+    }
+    
+    nav a {
+        font-size:1.5rem;
+         padding:.5rem .75rem;
+        margin:0 6% 1% 0
+    }
+    
+    footer {
+        
+        display:flex;
+        justify-content: space-between;
+    }
+    
+    footer p {
+        margin-top:0;
+    }
+    
+   
+}
+
+@media (min-width:1000px) {
+       
+    .work-list {
+        
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        grid-gap:2%;
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    
+  .resume {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "name photo"
+            "nav nav"
+            "about work"
+            "skills work"
+            "education work"
+            "service service"
+            "references references"
+            "footer footer";
+    }
+    
+    h1 {
+        font-size:6rem;
+    }
+    
+    h2 {
+        font-size:2.5rem;
+    }
+    
+    nav a {
+        
+        text-align:center;
+    }
+    
+    .work-list{ 
+        display:block;
+    }
+    
+    .ref-list {
+        
+        grid-template-columns:repeat(4, 1fr);
+    }
+    
+    .ref-1,
+    .ref-2,
+    .ref-3,
+    .ref-4 {
+        
+        width:auto;
+    }
+}
+
+@media (min-width:1400px) {
+    
+    h1 {
+        
+        font-size:7rem;
+    }
+    
+    h2 {
+        font-size:3.5rem;
+    }
+    
+    .resume { 
+        grid-template-columns:2fr 1fr; 
+        grid-template-areas:
+            "name photo"
+            "nav nav"
+            "about work"
+            "skills work"
+            "education work"
+            "service work"
+            "references references"
+            "footer footer";    
+    }
+    
+    .about,
+    .skills,
+    .education,
+    .service {
+        
+        margin-right:10%;
+    }
+    
+    .ref-list {
+        
+        flex-direction: column;
+    }
+    
+    nav a {
+        
+        padding:.75rem 1rem;
+    }
+}
