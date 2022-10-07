@@ -1,0 +1,263 @@
+@font-face {
+    font-family: "roboto";
+    src: url(".../fonts/robotocondensed-regular") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "raleway";
+    src: url(".../fonts/raleway-regular") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-size:16px;
+    font-family:'roboto', sans-serif;
+    color: #000;
+}
+
+body {
+    margin: 2% auto;
+    width: 98%;
+    max-width: 1920px;
+    box-sizing: border-box;
+}
+
+.page-header {
+    padding-bottom:2rem;
+    margin:0;
+    font-size: 2rem;
+    color:#ff9933;
+    font-weight: 100;
+}
+
+img {
+    display: block;
+    width: 100%;
+    border-radius: 3rem;
+    max-width: 500px;
+    margin: 0;
+}
+
+
+h2, nav a {
+    font-family: 'roboto', sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    color:#ff9933;
+    font-weight: 100;
+}
+
+.main-heading {
+    font-size: 3rem;
+    font-weight: 100;
+    margin: 2rem 0;
+    padding: 0 1%;
+}
+
+.title {
+    font-weight: normal;
+    color: #ff9933;
+    display: block;
+    font-family: roboto;
+    padding: 0 2%;
+    margin: 0;
+}
+
+.nav {
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 1fr;
+    display: block;
+}
+
+.nav a {
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-family: 'raleway';
+    text-decoration: underline;
+    color: #994d00;
+    margin: 5%;
+    padding: 1.5rem 2.5rem;
+}
+
+ .nav a:hover
+ {
+    color: #000;
+ }
+
+ main {
+    padding: 3% 1%;
+ }
+
+
+ .aside {
+    margin-top: 5rem;
+ }
+
+    .copyright {
+        margin-top: 5rem;
+        padding: 2rem 2%;
+    }
+
+    .copyright a {
+        color:#333
+    }
+
+ @media (min-width:600px) {
+    
+    .main-heading {
+        
+        font-size:3.75rem;
+    }
+    
+     .nav {
+        
+        grid-template-columns: repeat(3fr, 1fr);
+    }
+    
+    .nav a {
+        padding:1rem .5rem;
+        margin:1.5%;
+        text-align:center;
+    }
+    
+   
+}
+
+@media (min-width:800px) {
+    
+    .main-heading {
+        font-size:4rem;
+    }
+    
+    .nav {
+        
+        grid-template-columns: repeat(3fr, 1fr);
+    }
+    
+    .nav a {
+        
+        font-size:1.35rem;
+        padding:.5rem 1rem;
+        width:70%;
+    }
+    
+    .aside {
+        margin-top:5rem;
+        grid-column: 2 / 3;
+        
+    }
+}	 
+
+@media (min-width:900px) {
+    
+    .nav {
+       grid-template-columns: repeat(6fr, 1fr); 
+       
+    }
+    
+    .nav a {
+        
+        padding:.5rem;
+        margin:2%;
+        width:80%;
+    }
+    
+    .page-header {
+        
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap:1%;
+    }
+    
+    .main-heading {
+        
+        font-size:3.25rem;
+        margin-bottom:1rem;
+        background-color:inherit;
+        color:#333;
+        border-bottom:15px double #516488;
+    }
+}
+
+@media (min-width:1250px) {
+    
+    .main-heading {
+        font-size:4rem;
+    }
+    
+    .main-section {
+        display:grid;
+        grid-template-areas: 'subsec-1 subsec-2'
+                             'subsec-3 subsec-3';
+        grid-gap:3%;
+    }
+    
+     .sub-section-1 {
+        grid-area: subsec-1;
+    }
+    
+     .sub-section-2 {
+        grid-area: subsec-2;
+    }
+    
+    .sub-section-3 {
+        grid-area: subsec-3;
+    }
+}
+
+@media (min-width:1500px) {
+    
+    
+    body {
+        grid-gap:1%;
+        grid-template-areas: 'header image'
+                             'content content'
+                             'footer footer';
+         grid-gap:1%;
+    }
+    
+    .page-header {
+        grid-template-columns: 1fr;
+        grid-area: header;
+    }
+    
+    .main-heading {
+        font-size:3.75rem;
+    }
+    
+    
+    .content {
+        margin:0;
+        padding:0;
+        grid-area:content;
+    }
+
+    .copyright {
+        grid-area: footer;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1%;
+    }
+
+    .copyright :nth-child(2) {
+        text-align: right;
+    }
+}
+
+@media (min-width:1650px){
+    
+    .main-section {
+        grid-template-areas: 'subsec-1 subsec-2 subsec-3';
+    }
+    
+    .aside {
+        margin-top:5rem;
+        
+    }
+}
