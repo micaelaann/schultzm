@@ -216,9 +216,9 @@ h2 {
     
     body {
         grid-gap:1%;
-        grid-template-areas: 'header image'
-                             'content content'
-                             'footer footer';
+        grid-template-areas: "header image"
+                             "content content"
+                             "footer footer";
          grid-gap:1%;
     }
     
