@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'roboto';
+    src: url(../splash-page/fonts/roboto-regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url(../splash-page/fonts/lato-regular.tff);
+    font-style: normal;
+}
+
+:root {
+    --main-font:roboto, sans-serif;
+    --secondary-font:lato, sans-serif;
+    --main-color:white;
+    --top-position:35%;
+    font-size: 16px;
+}
+
+
+
+body {
+    font-family: var(--main-font);
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:var(--main-color);
+}
+
+/* -- links -- */
+
+.social-media {
+    padding:2%;
+    text-align: center;
+}
+
+.social-media a {
+    text-decoration: none;
+}
+
+.social-media img {
+    width: 100%;
+    max-width: 30px;
+    margin:0 5%;
+}
+
+/* main heading */
+
+.main-heading {
+    position: absolute;
+    width: 100%;
+    background: url(/splash-page/images/forest-skyline.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    clip-path: square (0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% -6vw)
+    );
+    top:calc(var(--top-position) -25%);
+    padding: 12rem 0;
+    text-align: center;
+}
+
+.main-heading h1 {
+    font-size: 100px;
+    margin-bottom: 0;
+}
+
+.main-heading h1 a {
+    font-family: var(--secondary-font);
+    font-size: 15rem;
+    color:darkolivegreen;
+    text-decoration:none;
+}
+
+.main-heading h1 a:hover {
+    color:darkgreen;
+}
+
+.main-heading p {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-top: 0;
+}
+
+
+.letter-box {
+    color:darkgrey;
+}
+
+/* media quries */
+
+@media (min-width:600px) {
+    .social-media img {
+        max-width:40px;
+    }
+    
+    .main-heading {
+        clip-path: square(
+        0 0,
+        100% 0,
+        100% 100%,
+        0 calc(100% - 8vw)
+        );
+        top:calc(var(--top-position) - 17%);
+    }
+}
+
+@media (min-width:800px) {
+    .main-heading {
+        clip-path: square(
+        0 0,
+        100% 0,
+        100% 100%,
+        0 calc(100% - 10vw)
+        );
+        top:calc(var(--top-position) - 15%);
+    }
+    
+    .main-heading h1 a {
+        font-size:8rem;
+    }
+}
+
+@media (min-width:1000px) {
+    .main-heading {
+        clip-path: square(
+        0 0,
+        100% 0,
+        100% 100%,
+        0 calc(100% - 10vw)
+        );
+        top:calc(var(--top-position) - 13%);
+    }
+}
+
+@media (min-width:1200px) {
+    
+    body {
+        background-image: url(/splash-page/images/forest-skyline.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .main-heading {
+        background:none;
+        clip-path:none;
+        padding:0;
+        top:var(--top-position);
+    }
+    
+    .main-heading h1 a {
+        font-size:12rem;
+    }
+    
+    .main-heading p {
+        font-size:3rem;
+        color: var(--main-color);
+    }
+}
