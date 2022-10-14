@@ -52,7 +52,7 @@ body {
 .main-heading {
     position: absolute;
     width: 100%;
-    background: url(/splash-page/images/forest-skyline.jpg);
+    background: url(images/forest-skyline.jpg);
     background-repeat: no-repeat;
     background-position: center;
     clip-path: square (0 0,
@@ -141,7 +141,7 @@ body {
 @media (min-width:1200px) {
     
     body {
-        background-image: url(/splash-page/images/forest-skyline.jpg);
+        background-image: url(images/forest-skyline.jpg);
         background-repeat: no-repeat;
         background-position: center;
     }
