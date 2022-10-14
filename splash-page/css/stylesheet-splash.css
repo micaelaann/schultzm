@@ -52,7 +52,7 @@ body {
 .main-heading {
     position: absolute;
     width: 100%;
-    background: url(images/forest-skyline.jpg);
+    background: url(https://i.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68);
     background-repeat: no-repeat;
     background-position: center;
     clip-path: square (0 0,
@@ -141,7 +141,7 @@ body {
 @media (min-width:1200px) {
     
     body {
-        background-image: url(images/forest-skyline.jpg);
+        background-image: url(https://i.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68);
         background-repeat: no-repeat;
         background-position: center;
     }
