@@ -1,7 +1,6 @@
 body {
     margin: 0;
     box-sizing: border-box;
-    background-color:#EEE;
 }
 
 .page-header {
@@ -30,6 +29,6 @@ body {
 @media (min-width:1200px) {
     
     .logo img {
-        border:2px solid #333;
+        border:2px solid darkolivegreen;
     }
 }
