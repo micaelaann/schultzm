@@ -98,7 +98,6 @@ a {
 .gallery {
     margin:0;
     width:100%;
-    display:grid;
     grid-template-columns:1fr;
     grid-gap:.5rem;
     filter:drop-shadow(.5rem .5rem 1rem #333);
@@ -128,7 +127,7 @@ a {
 .gallery-item-2,
 .gallery-item-3,
 .gallery-item-4{
-    margin-top:-78%;
+    margin-top:-79%;
 }
 
 
@@ -250,7 +249,7 @@ a {
 
     .gallery-item-3,
     .gallery-item-4 {
-        margin-top:-61%;
+        margin-top:-78%;
     }
 
     .footer-nav a {
