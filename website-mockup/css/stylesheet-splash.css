@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'roboto';
+    src: url(fonts/roboto-regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url(fonts/lato-regular.ttf);
+    font-style: normal;
+}
+
+:root {
+    --main-font:roboto, sans-serif;
+    --secondary-font:lato, sans-serif;
+    --main-color:white;
+    --top-position:35%;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--main-font);
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:var(--main-color);
+}
+
+.page-header {
+    margin:0;
+}
+
+.logo {
+    margin:0;
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.logo img {
+    display:block;
+    margin:0 auto;
+    width:200%;
+    max-width:1200px;
+}
+
+.social-media a {
+    text-decoration: none;
+}
+
+
+
+/* Splash Page Styles */
+
+.splash-page-social-media {
+    padding:.5rem;
+}
+
+.splash-page-social-media a {
+    padding:.25rem;
+}
+.splash-page-social-media img {
+    max-width:30px;
+}
+
+.splash-page-logo img {
+    display:block;
+    margin:0 auto;
+    width:100%;
+    max-width:1200px;
+}
+
+.splash-page-heading p {
+    text-align:center;
+    font-size:2rem;
+    margin-top:-1.5rem;
+    font-family:var(--main-font);
+}
+
+
+
+@media (min-width:1200px) {
+    
+    .logo img {
+        border:2px solid darkolivegreen;
+    }
+}

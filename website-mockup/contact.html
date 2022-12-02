@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Micaela Schultz">
+        <title>Contact</title>
+        <link href="css/style-contact.css" rel="stylesheet">
+    </head>
+    <body>
+       <header class="page-header">
+            <div class="top-bar">
+                <div class="social-media">
+                    <a href="https://www.facebook.com/">
+                        <img src="images/facebook.png">
+                    </a>
+
+                    <a href="https://www.instagram.com/">
+                        <img src="images/instagram.png">
+                    </a>
+
+                    <a href="https://www.twitter.com/">
+                        <img src="images/twitter.png">
+                    </a>
+                </div>
+
+                <form class="search-bar">
+                    <input class="search-box" type="search" placeholder="search...">
+                    <input class="search-icon" type="image" src="images/search.png">
+                </form>
+                <p class="cart-and-account">
+                    <a href="#">sign in</a>
+                    <img src="images/shopping-cart.png">
+                </p>
+            </div>
+
+            <div class="logo">
+                <a href="home.html">
+                    <img src="images/skyline.svg">
+                </a>
+            </div>
+            <p class="page-sub-header">fashion &#124; accesories</p>
+       </header>
+        <main>
+            <form action="/action_page.php" class="contact-form">
+                <fieldset class="first-name">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" required>
+                </fieldset>
+
+                <fieldset class="last-name">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" required>
+                </fieldset>
+
+                <fieldset class="email">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </fieldset>
+
+                <fieldset class="comments">
+                    <label for="comments">Comments</label>
+                    <textarea id="comments" name="subject"></textarea>
+                </fieldset>
+
+                <fieldset class="privacy">
+                    <label for="privacy">By clicking Submit, I agree to the terms and conditions of this <a href="#">Privacy Statement</a></label>
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                </fieldset>
+
+                <fieldset class="submit-reset">
+                    <input type="submit" value="submit">
+                    <input type="reset" value="resest">
+                </fieldset>
+            </form>
+        </main>
+        <footer class="page-footer">
+            <nav class="footer-nav">
+                <a href="#">about us</a>
+                <a href="#">mission</a>
+                <a href="#">faq</a>
+                <a href="contact.html">contact</a>
+            </nav>
+            <p class="copyright">&copy; 2022 <a href="mailto:info.skyline.com">Skyline, Inc.</a></p>
+            <p class="address">8475 North Side Ave. Bellvue, WA 91212</p>
+        </footer>
+    </body>
+</html>
