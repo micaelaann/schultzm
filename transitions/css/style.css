@@ -260,7 +260,7 @@ a {
 @media (min-width:800px) {
     body {
         margin:0 auto;
-        width:90%;
+        width:100%;
     }
     
     .gallery-item > figure > img {
