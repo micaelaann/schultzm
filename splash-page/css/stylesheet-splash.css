@@ -1,19 +1,19 @@
 @font-face {
     font-family: 'roboto';
-    src: url(../splash-page/fonts/roboto-regular.ttf);
+    src: url('/splash-page/fonts/roboto-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'lato';
-    src: url(../splash-page/fonts/lato-regular.tff);
+    font-family: 'oswald';
+    src: url('/splash-page/fonts/oswald-regular.ttf') format('truetype');
     font-style: normal;
 }
 
 :root {
-    --main-font:roboto, sans-serif;
-    --secondary-font:lato, sans-serif;
+    --main-font:'roboto', sans-serif;
+    --secondary-font:'oswald', sans-serif;
     --main-color:white;
     --top-position:35%;
     font-size: 16px;
@@ -32,47 +32,46 @@ body {
 
 /* -- links -- */
 
-.social-media {
+.social-media-links {
     padding:2%;
-    text-align: center;
+    text-align: right;
 }
 
-.social-media a {
+.social-media-links a {
     text-decoration: none;
 }
 
-.social-media img {
+.social-media-links img {
     width: 100%;
     max-width: 30px;
-    margin:0 5%;
+    margin:0 .5%;
 }
 
 /* main heading */
 
 .main-heading {
-    position: absolute;
+    position:static;
     width: 100%;
-    background: url(https://i.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68);
+    background: url(https://i.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68) no-repeat;
     background-repeat: no-repeat;
     background-position: center;
     clip-path: square (0 0,
     100% 0,
     100% 100%,
-    0 calc(100% -6vw)
+    0 calc(100% - 6vw)
     );
-    top:calc(var(--top-position) -25%);
+    top:calc(var(--top-position) - 20%);
     padding: 12rem 0;
     text-align: center;
 }
 
 .main-heading h1 {
-    font-size: 100px;
     margin-bottom: 0;
 }
 
 .main-heading h1 a {
     font-family: var(--secondary-font);
-    font-size: 15rem;
+    font-size: 6rem;
     color:darkolivegreen;
     text-decoration:none;
 }
@@ -81,21 +80,20 @@ body {
     color:darkgreen;
 }
 
+.letter-box {
+    color:darkgrey;
+}
+
 .main-heading p {
     font-size: 2rem;
     color: var(--main-color);
     margin-top: 0;
 }
 
-
-.letter-box {
-    color:darkgrey;
-}
-
 /* media quries */
 
 @media (min-width:600px) {
-    .social-media img {
+    .social-media-links img {
         max-width:40px;
     }
     
@@ -157,6 +155,9 @@ body {
         font-size:12rem;
     }
     
+    .main-heading h1 a {
+        color:darkolivegreen;
+    }
     .main-heading p {
         font-size:3rem;
         color: var(--main-color);

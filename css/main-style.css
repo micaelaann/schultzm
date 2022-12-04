@@ -1,13 +1,13 @@
 @font-face {
     font-family: "roboto";
-    src: url(".../fonts/robotocondensed-regular") format('truetype');
+    src: url("/fonts/roboto-regular.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "raleway";
-    src: url(".../fonts/raleway-regular") format('truetype');
+    src: url("/fonts/raleway-regular.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -30,13 +30,13 @@ body {
     margin:0;
     font-size: 2rem;
     color:#ff9933;
-    font-weight: 100;
+    font-weight:normal;
 }
 
 img {
-    display: block;
-    width: 100%;
-    border-radius: 3rem;
+    display:block;
+    width: 80%;
+    border-radius: 2rem;
     max-width: 500px;
     margin: 0;
 }
@@ -52,13 +52,6 @@ h2 {
     font-weight: 100;
 }
 
-.main-heading {
-    font-size: 3rem;
-    font-weight: 100;
-    margin: 2rem 0;
-    padding: 0 1%;
-}
-
 .title {
     font-weight: normal;
     color: #ff9933;
@@ -72,7 +65,6 @@ h2 {
     margin: 0;
     padding: 0;
     grid-template-columns: 1fr;
-    display: block;
 }
 
 .nav a {
@@ -82,42 +74,39 @@ h2 {
     text-decoration: underline;
     color: #994d00;
     margin: 5%;
-    padding: 1.5rem 2.5rem;
+    padding: 1.5rem;
 }
 
- .nav a:hover
- {
-    color: #000;
- }
+.nav a:hover
+{
+   color: #000;
+}
 
- main {
-    padding: 3% 1%;
- }
+main {
+   padding: 3% 1%;
+}
 
+.sidebar {
+   margin-top: 5rem;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+}
 
- .aside {
-    margin-top: 5rem;
- }
+.copyright {
+       margin-top: 5rem;
+       padding: 2rem 2%;
+   }
 
-    .copyright {
-        margin-top: 5rem;
-        padding: 2rem 2%;
-    }
+   .copyright a {
+       color:#333
+   }
 
-    .copyright a {
-        color:#333
-    }
-
- @media (min-width:600px) {
+   @media (min-width:600px) {
     
-    .main-heading {
-        
-        font-size:3.75rem;
-    }
     
-     .nav {
+    .nav {
         
-        grid-template-columns: repeat(3fr, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
     
     .nav a {
@@ -131,13 +120,9 @@ h2 {
 
 @media (min-width:800px) {
     
-    .main-heading {
-        font-size:4rem;
-    }
-    
     .nav {
         
-        grid-template-columns: repeat(3fr, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
     
     .nav a {
@@ -147,21 +132,22 @@ h2 {
         width:70%;
     }
     
-    .aside {
-        margin-top:5rem;
-        grid-column: 2 / 3;
-        
+    .sidebar {
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }	 
 
 @media (min-width:1000px) {
     
-    .nav {
-       grid-template-columns: repeat(6fr, 1fr); 
-       
-    }
     
-    .nav a {
+    .nav {
+        grid-template-columns: repeat(4, 1fr); 
+        
+     }
+  
+     .nav a {
         
         padding:.5rem;
         margin:2%;
@@ -174,18 +160,10 @@ h2 {
         grid-template-columns: 1fr 1fr;
         grid-gap:1%;
     }
-    
-    .main-heading {
-        
-        font-size:3.25rem;
-        margin-bottom:1rem;
-        background-color:inherit;
-        color:#333;
-        border-bottom:15px double #516488;
-    }
 }
 
 @media (min-width:1050px) {
+
     .sidebar {
         margin-top: 5em;
         display: grid;
@@ -194,10 +172,6 @@ h2 {
 }
 
 @media (min-width:1250px) {
-    
-    .main-heading {
-        font-size:4rem;
-    }
     
     .main-section {
         display:grid;
@@ -220,8 +194,7 @@ h2 {
 }
 
 @media (min-width:1500px) {
-    
-    
+
     body {
         grid-gap:1%;
         grid-template-areas: "header image"
@@ -235,10 +208,14 @@ h2 {
         grid-area: header;
     }
     
-    .main-heading {
-        font-size:3.75rem;
+    .nav {
+        align-items: baseline;
     }
     
+    .nav a {
+        padding: .5rem;
+        width:inherit;
+    }
     
     .content {
         margin:0;
@@ -264,8 +241,10 @@ h2 {
         grid-template-areas: 'subsec-1 subsec-2 subsec-3';
     }
     
-    .aside {
-        margin-top:5rem;
-        
+    .sidebar {
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
     }
+        
 }
