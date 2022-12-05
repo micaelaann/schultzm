@@ -1,22 +1,22 @@
 @font-face {
-    font-family: "Oswald";
-    src: url(.../transitions/fonts/Oswald-Regular.ttf) format('truetype');
+    font-family: "oswald";
+    src: url('/forms/fonts/oswald-regular.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Raleway";
-    src: url(.../transitions/fonts/Raleway-Regular.ttf) format('truetype');
+    font-family: "raleway";
+    src: url('/forms/fonts/raleway-regular.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
 }
 
 :root {
-	--main-foint:Oswald, sans-serif;
-	--secondary-font:Raleway, sans-serif;
+	--main-foint:oswald, sans-serif;
+	--secondary-font:raleway, sans-serif;
 	--main-color:#333;
-	--main-link-color:black;
+	--main-link-color:darkolivegreen;
 	--main-background-color:white;
 	--top-positions:35%;
 	font-size:16px;
@@ -74,7 +74,7 @@ path {fill:#333;
     grid-area:2 / 1 / 2 / 3;
     height:1.5rem;
     display:block;
-    border:2px solid #333;
+    border:2px solid darkolivegreen;
     border-radius:5px;
     border-color:#333;
     display:flex;
@@ -114,64 +114,11 @@ path {fill:#333;
 
 .page-sub-header {
     text-align:center;
-    color:#333;
+    color:darkolivegreen;
     font-size:2rem;
     margin-top:-1.5rem;
     font-family:var(--main-font);
     grid-area:page-sub-header;
-}
-
-.gallery {
-    margin:0;
-    width:100%;
-    display:grid;
-    grid-template-columns:1fr;
-    grid-gap:.5rem;
-    filter:drop-shadow(.5rem .5rem 1rem #333);
-}
-
-.gallery-item {
-    margin:auto;
-    position: relative;
-    width:100%;
-    background-color:transparent;
-}
-
-.gallery-item > figure {
-    margin:0;
-    width:100%;
-}
-
-.gallery-item > figure > img {
-    width:100%;
-    clip-path: inset(15% 0 35% 0);
-}
-
-.gallery-item-1 {
-    margin-top:-15%;
-}
-
-.gallery-item-2,
-.gallery-item-3,
-.gallery-item-4{
-    margin-top:-78%;
-}
-         
-.overlay {
-    position: absolute;
-    top:0;
-    left:0;
-    height: 100%;
-    width:100%;
-    opacity:0;
-    transition:.75s ease;
-
-}
-
-.gallery-item:hover .overlay,
-.gallery-item:active .overlay {
-  opacity:.8;
-    transition:.75s ease;
 }
 
 .text {
@@ -245,7 +192,7 @@ fieldset {
 }
 
 .contact-form input[type=submit] {
-    background-color:#5c3335;
+    background-color:#153309;
 }
 
 .contact-form input[type=reset] {
@@ -277,22 +224,6 @@ input[type=reset]:hover {
         margin:0 auto;
         width:90%;
     }
-
-    .gallery {
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap:0;
-    }
-    
-    .gallery-item-1,
-    .gallery-item-2 {
-    margin-top:-15%;
-    }
-
-    .gallery-item-3,
-    .gallery-item-4 {
-        margin-top:-78%;
-    }
     
     .page-footer {
         margin:-10% 0 0 0;
@@ -317,21 +248,6 @@ input[type=reset]:hover {
     .logo {
         margin:0 auto;
         width:80%;
-    }
-    
-    .gallery-item > figure > img {
-    width:100%;
-    clip-path: inset(10% 0 30% 0);
-    }
-
-    .gallery-item-1,
-    .gallery-item-2 {
-    margin-top:-15%;
-    }
-
-    .gallery-item-3,
-    .gallery-item-4 {
-        margin-top:-61%;
     }
 
     .footer-nav a {
@@ -389,22 +305,7 @@ input[type=reset]:hover {
     .social-media,
     .cart-and-account {
         grid-area:auto;
-    }
-    
-    .gallery-item > figure > img {
-    width:100%;
-    clip-path: inset(5% 0 25% 0);
-    }
-
-    .gallery-item-1,
-    .gallery-item-2 {
-    margin-top:-5%;
-    }
-
-    .gallery-item-3,
-    .gallery-item-4 {
-        margin-top:-47.7%;
-    }   
+    } 
     
     .contact-form {
         margin:0 auto 30% auto;
@@ -413,21 +314,6 @@ input[type=reset]:hover {
 }
 
 @media (min-width:900px) {
-    
-    .gallery-item > figure > img {
-    width:100%;
-    clip-path: inset(0 0 20% 0);
-    }
-
-    .gallery-item-1,
-    .gallery-item-2 {
-    margin-top:0;
-    }
-
-    .gallery-item-3,
-    .gallery-item-4 {
-        margin-top:-31.2%;
-    }
     
     .contact-form {
         margin:0 auto 20% auto;
@@ -465,38 +351,6 @@ input[type=reset]:hover {
         font-weight: 900;
         color:#FFF;
         background-color:transparent;
-    }
-    
-    .gallery-item img {
-        transition: .75s ease;
-    }
-    .overlay {
-        background-color:transparent;
-        transition: .75s ease;
-    }
-    
-    .gallery-item:hover overlay,
-    .gallery-item:hover img,
-    .overlay:hover {
-        opacity:.5;
-        transition:.75s ease;
-    }
-    .gallery {
-        display:grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap:0;
-        margin:5% 0 10% 0;
-    }
-   .gallery-item > figure > img {
-        width:100%;
-        clip-path: none;
-    }
-    
-    .gallery-item-1,
-    .gallery-item-2,
-    .gallery-item-3,
-    .gallery-item-4 {
-        margin-top:0;
     }
     
     .page-footer {

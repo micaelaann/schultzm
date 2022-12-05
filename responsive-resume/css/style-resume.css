@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "Lora-Regular";
+    font-family: "lora-regular";
     src: url('/responsive-resume/fonts/lora-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -16,7 +16,7 @@ html {
 body {
     background-color: #fff;
     font-size: 1.5rem;
-    font-family: 'lora-regular' sans-serif; 
+    font-family: 'lora-regular' serif; 
     max-width: 1600px;
     margin:0;
 }

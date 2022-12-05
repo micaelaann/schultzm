@@ -10,11 +10,11 @@ body {
 .logo {
     margin:0;
     position:absolute;
-    top:0;
+    top: 150px;
     left:0;
     height:100%;
     width:100%;
-    display:flex;
+    display:flexbox;
     align-items:center;
     justify-content:center;
 }
@@ -22,7 +22,7 @@ body {
 .logo img {
     display:block;
     margin:0 auto;
-    width:200%;
+    width:100%;
     max-width:1200px;
 }
 
