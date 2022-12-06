@@ -1,22 +1,22 @@
 @font-face {
     font-family: "Oswald";
-    src: url(fonts/Oswald-Regular.ttf) format('truetype');
+    src: url('fonts/Oswald-Regular.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Raleway";
-    src: url(fonts/Raleway-Regular.ttf) format('truetype');
+    src: url('fonts/Raleway-Regular.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
 }
 
 :root {
-	--main-foint:Oswald, sans-serif;
-	--secondary-font:Raleway, sans-serif;
+	--main-foint:'Oswald', sans-serif;
+	--secondary-font:'Raleway', sans-serif;
 	--main-color:#333;
-	--main-link-color:black;
+	--main-link-color:darkolivegreen;
 	--main-background-color:white;
 	--top-positions:35%;
 	font-size:16px;
@@ -74,7 +74,7 @@ path {fill:#333;
     grid-area:2 / 1 / 2 / 3;
     height:1.5rem;
     display:block;
-    border:2px solid #333;
+    border:2px solid darkolivegreen;
     border-radius:5px;
     border-color:#333;
     display:flex;
@@ -114,7 +114,7 @@ path {fill:#333;
 
 .page-sub-header {
     text-align:center;
-    color:#333;
+    color:darkolivegreen;
     font-size:2rem;
     margin-top:-1.5rem;
     font-family:var(--main-font);

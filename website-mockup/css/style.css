@@ -1,22 +1,22 @@
 @font-face {
     font-family: "Oswald";
-    src: url(fonts/Oswald-Regular.ttf) format('truetype');
+    src: url('fonts/Oswald-Regular.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Raleway";
-    src: url(fonts/Raleway-Regular.ttf) format('truetype');
+    src: url('fonts/Raleway-Regular.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
 }
 
 :root {
-	--main-foint:Oswald, sans-serif;
-	--secondary-font:Raleway, sans-serif;
-	--main-color:rgb(9, 16, 78);
-	--main-link-color:black;
+	--main-foint:'oswald', sans-serif;
+	--secondary-font:'raleway', sans-serif;
+	--main-color:#333;
+	--main-link-color:darkolivegreen;
 	--main-background-color:white;
 	--top-positions:35%;
 	font-size:16px;
@@ -38,33 +38,32 @@ a {
     font-family: var(--secondary-font);
 }
 
-.page-header {
-        padding:1%;
+
+
+
+.top-bar {
         display:grid;
-        grid-template-areas:'social-media cart-account'
-                            'logo logo'
-                            'page-sub-header page-sub-header';
+        align-items: center;
+        padding:0 1%;
     }
+    
 
 .social-media {
-    display:flex;
-    align-items: center;
-    padding:0 1%;
-}
+        padding:0 1%;
+        grid-area: 1 / 1 / 2 / 2;
+    }
 
 .social-media a {
         display:inline-block;
         padding:2%;
-        grid-area:social-media;
     }
 
 .cart-and-account {
-    display:flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding:2%;
-    grid-area:cart-account;
-}
+        grid-area:1 / 2 / 2 / 3;
+        display:flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
 
 .cart-and-account a {
     padding:0 1%;    
@@ -118,7 +117,7 @@ a {
 
 .page-sub-header {
     text-align:center;
-    color:#333;
+    color:darkolivegreen;
     font-size:2rem;
     margin-top:-1.5rem;
     font-family:var(--main-font);
@@ -130,7 +129,7 @@ a {
     width:100%;
     grid-template-columns:1fr;
     grid-gap:.5rem;
-    filter:drop-shadow(.5rem .5rem 1rem #333);
+    filter:drop-shadow(.5rem .5rem 1rem darkolivegreen);
 }
 
 .gallery-item {
@@ -147,7 +146,7 @@ a {
 
 .gallery-item > figure > img {
     width:100%;
-    height: 450px;
+    height: 500px;
     clip-path: inset(15% 0 35% 0);
 }
 
@@ -258,18 +257,19 @@ a {
 
 @media (min-width:700px) {
     
+    .splash-page-social-media img,
     .social-media img,
     .cart-and-account img {
         max-width:40px;
     }
     
+    .search-bar {
+        height:2rem;
+    }
+
     .logo {
         margin:0 auto;
         width:80%;
-    }
-
-    .search-bar {
-        height:2rem;
     }
     
     .gallery-item > figure > img {
@@ -297,11 +297,17 @@ a {
         margin:0 auto;
         width:100%;
     }
-    
+
     .top-bar {
         grid-template-columns: 2fr 4fr 2fr;
     }
     
+    .search-bar,
+    .social-media,
+    .cart-and-account {
+        grid-area:auto;
+    }
+
     .gallery-item > figure > img {
     width:100%;
     clip-path: inset(5% 0 25% 0);
@@ -428,7 +434,4 @@ a {
     .logo {
         width:60%;
     }
-    
-    
 }
-
